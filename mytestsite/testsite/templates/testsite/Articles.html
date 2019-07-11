@@ -1,0 +1,66 @@
+{% extends "testsite/base.html" %}
+{% block title %}
+    Senator Ibrahim Hadejia
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="uk-position-top uk-text-large">
+    <nav class="uk-navbar-container uk-dark" uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="{%url 'home'%}" uk-scroll>IHH</a>
+          <ul class="uk-navbar-nav">
+              <li class="uk-active"><a href="{% url 'home' %}">Back to Home</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="uk-padding-large uk-background-muted">
+<div class="uk-padding-medium">
+<article class="uk-article uk-padding-large">
+
+<h1 class="uk-article-title uk-text-center uk-padding-medium">{{article.title}}</h1>
+
+<p class="uk-article-meta uk-padding-medium">Written by <a href="#">{{article.author}}</a> on {{article.publish_date}}. Posted in <a href="#">{% for filter in article.filter.all %} {{ filter }}{% if not forloop.last %}, {% endif %}{% endfor %}</a></p>
+
+<p class="uk-text-lead uk-padding-medium">{{article.article}}</p>
+
+</article>
+</div>
+<h2 id ="Comments"> Comments </h2>
+{% for comments in comments %}
+<article  class="uk-comment uk-comment-primary uk-background-default">
+    <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+        <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">{{comments.author}}</a></h4>
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                <li><a href="#">{{comments.posted_on}}</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="uk-comment-body">
+        <p>{{comments.body}}</p>
+    </div>
+</article>
+{% endfor %}
+<form class="uk-form-stacked uk-padding-large" action=/Blog/{{article.id}} method='POST'>
+  <legend class="uk-legend uk-dark uk-heading-primary uk-text-center">Post a comment</legend>
+
+  {% csrf_token %}
+    <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-text">Name</label>
+        <div class="uk-form-controls">
+            <input class="uk-input" id="form-stacked-text" name="author" type="text" placeholder="Enter a Name">
+        </div>
+    </div>
+
+    <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-select">Comment</label>
+        <div class="uk-form-controls">
+ <textarea class="uk-textarea" rows="5" placeholder="Type a comment" name="body"></textarea>
+        </div>
+    </div>
+     <button class="uk-button uk-button-default">Post</button>
+
+</form>
+</div>
+{%endblock%}

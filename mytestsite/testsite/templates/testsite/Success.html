@@ -1,0 +1,12 @@
+{% extends "testsite/base.html" %}
+{% block title %}
+    Senator Ibrahim Hadejia
+{% endblock %}
+{% block body %}
+{% load static %}
+<ul class="uk-navbar-nav">
+  <li class="uk-active"><a href="{% url 'home' %}">Back to Home</a></li>
+</ul>
+<span uk-icon="icon: check; ratio: 3.5" class="uk-center"></span>
+<h1> Thanks for contacting me, someone will get in touch very soon</h1>
+{% endblock %}

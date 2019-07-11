@@ -1,0 +1,153 @@
+{% extends "testsite/base.html" %}
+{% block title %}
+    Senator Ibrahim Hadejia
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="uk-background-norepeat uk-background-cover uk-dark">
+
+<div class="uk-position-top uk-text-large">
+    <nav class="uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+              <a class="uk-navbar-item uk-logo" href="{% url 'home' %}" uk-scroll>IHH</a>
+                <li class="uk-active"><a href="{% url 'home' %}">Back to Home</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="uk-section uk-height-viewport uk-background-cover uk-overflow-hidden" style="background-image: url(static/testsite/images/maybe3.jpg);"  uk-parallax="bgy: -200">
+
+  <div class=" uk-card uk-card-default uk-card-body uk-margin-xlarge-top uk-dark uk-text-large uk-text-bottom"  uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
+   <h1 class="uk-heading-primary uk-text-center">PROJECTS</h1>
+
+
+  </div>
+
+</div>
+
+
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+<div class="uk-card-media-left uk-cover-container">
+  <img src="{% static 'testsite/images/proj2.jpg' %}" alt="" uk-cover>
+  <canvas width="600" height="400"></canvas>
+</div>
+<div>
+  <div class="uk-card-body">
+      <h3 class="uk-card-title">Building something</h3>
+      <p>Brief or long drescription</p>
+      <div uk-lightbox>
+          <a class="uk-button uk-button-default" href="{% static 'testsite/images/proj1.jpg' %}">See more</a>
+          <a  href="{% static 'testsite/images/proj2.jpg' %}"></a>
+          <a  href="{% static 'testsite/images/proj7.jpg' %}"></a>
+          <a  href="{% static 'testsite/images/proh6.jpg' %}"></a>
+          <button class="uk-button uk-button-default" uk-toggle="target: #modal-example">Details</button>
+
+</div>
+
+
+
+  </div>
+
+</div>
+</div>
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+<div class="uk-flex-last@s uk-card-media-left uk-cover-container">
+  <img src="{% static 'testsite/images/proj8.jpg' %}" alt="" uk-cover>
+  <canvas width="600" height="400"></canvas>
+</div>
+<div>
+  <div class="uk-card-body">
+      <h3 class="uk-card-title">Looking at stuff</h3>
+      <p>Brief or long description</p>
+      <div uk-lightbox>
+          <a class="uk-button uk-button-default" href="{% static 'testsite/images/proj3.jpg' %}">See more</a>
+          <a  href="{% static 'testsite/images/proj4.jpg' %}"></a>
+          <button class="uk-button uk-button-default" uk-toggle="target: #modal-example">Details</button>
+
+
+      </div>
+
+
+  </div>
+
+</div>
+</div>
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+<div class="uk-card-media-left uk-cover-container">
+  <img src="{% static 'testsite/images/proj3.jpg' %}" alt="" uk-cover>
+  <canvas width="600" height="400"></canvas>
+</div>
+<div>
+  <div class="uk-card-body">
+      <h3 class="uk-card-title">Wow super interesting rice</h3>
+      <p>Brief or long drescription</p>
+      <div uk-lightbox>
+          <a class="uk-button uk-button-default" href="{% static 'testsite/images/proj3.jpg' %}">See more</a>
+          <a  href="{% static 'testsite/images/proj5.jpg' %}"></a>
+          <button class="uk-button uk-button-default" uk-toggle="target: #modal-example">Details</button>
+
+
+      </div>
+
+  </div>
+
+</div>
+</div>
+<div id="modal-example" uk-modal>
+<div class="uk-modal-dialog">
+
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+
+      <div class="uk-modal-header">
+          <h2 class="uk-modal-title">Super Super detailed or short maybe</h2>
+      </div>
+
+      <div class="uk-modal-body" uk-overflow-auto>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+
+      <div class="uk-modal-footer uk-text-right">
+          <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+          <button class="uk-button uk-button-primary" type="button">Save</button>
+      </div>
+
+  </div></div>
+
+</div>
+<a class="uk-dark uk-xlarge-margin-left uk-text-large" href="#" uk-totop uk-scroll>GO BACK TO TOP</a>
+<footer class="uk-section-secondary">
+
+
+    <div class="uk-padding-small uk-margin-xlarge-left" uk-grid>
+    <ul class="uk-iconnav">
+      <a href="https://twitter.com/ihadejia" uk-icon="twitter"></a>
+      <a href="" uk-icon="facebook"></a>
+      <a href="https://www.instagram.com/ihadejia/" uk-icon="instagram"></a>
+    </ul>
+
+    <p class="uk-text-bottom">  © 2019 Senator Ibrahim Hadejia. Designed by Rukayya Hadejia </p>
+</div>
+
+
+
+</footer>
+{% endblock %}

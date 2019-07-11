@@ -1,0 +1,95 @@
+{% extends "testsite/base.html" %}
+{% block title %}
+    Senator Ibrahim Hadejia
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="uk-position-top uk-text-large">
+    <nav class="uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="{% url 'home' %}" uk-scroll>IHH</a>
+
+            <ul class="uk-navbar-nav">
+              <li class="uk-active"><a href="{% url 'home' %}">Back to Home</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="uk-height-viewport uk-background-cover uk-preserve-color" uk-parallax="bgy: -300" style="background-image: url('static/testsite/images/Hadejia.JPG');" uk-height-viewport="offset-top: true; offset-bottom: 15">
+</div>
+<div class="uk-padding-medium">
+<h1 class="uk-text-center uk-heading-primary"> Hadejia </h1>
+</div>
+
+<div id="background" class="uk-section uk-padding-large">
+<div>
+<h1 class="uk-text-center"> A brief background of Hadejia </h1>
+
+</div>
+<div class="uk-flex-middle uk-width-2-3@m uk-align-center" uk-grid>
+<div class="uk-panel">
+    <p>Hadejia, town and traditional emirate, eastern Jigawa state, northern Nigeria. It lies on the northern bank of the Hadejia River (a seasonal tributary of the Komadugu Yobe, which flows into Lake Chad). The emirate’s savanna area originally included Hadejia and six other small Hausa kingdoms that paid tribute to the kingdom of Bornu. About 1805, Umaru, a Fulani leader who held the title sarkin (“chief ”) Fulanin Hadejia, pledged allegiance to the Fulani jihad (holy war) leader, Usman dan Fodio. Umaru’s brother and successor, Emir Sambo (reigned 1808–45), officially founded the Hadejia emirate in 1808, moved his headquarters to Hadejia town, established a market, and began to consolidate Fulani rule over the small neighbouring Hausa kingdoms.</p>
+
+    <p>Emir Buhari (also Bohari, or Bowari; reigned 1848–50, 1851–63) renounced Hadejia’s allegiance to the Fulani sultanate centred at Sokoto in 1851, raided the nearby emirates of Kano, Katagum, Gumel, Bedde, and Jama’are, and enlarged his own emirate. Hadejia was brought back into the Fulani empire after Buhari’s death, but wars with neighbouring Gumel continued until 1872. In 1906 the British installed an emir, Haruna, and incorporated the emirate into Kano province. The emirate became part of newly created Jigawa state in 1991.</p>
+
+    <p>The town is now a market centre handling cotton, millet, sorghum, fish, and the rice grown in the river valley. It serves as an important collecting point for peanuts (groundnuts), an export crop. Cattle, goats, guinea fowl, sheep, and donkeys are kept by the local Hausa and Fulani peoples. Several small lime industries exist in scattered parts of the area. Hadejia town is located on the secondary highway between Gumel and Nguru, which links it to the main highway at Kano and to the railway at Kano and Nguru. Pop. (2006) local government area, 105,628(<a href="https://www.britannica.com/place/Hadejia">Source.</a>)</p>
+</div>
+</div>
+</div>
+
+</div>
+<div id="shattimas" class="uk-section-muted uk-padding-large">
+<div>
+<h1 class="uk-text-center"> History of the Shattimas of Hadejia</h1>
+</div>
+<div class="uk-flex-middle" uk-grid>
+
+<div class="uk-panel">
+  <img class="uk-align-left uk-margin-remove-adjacent" src="{% static 'testsite/images/genealogyofHadejiaemirs.jpg' %}" width="300" height="250" alt="Example image">
+
+<p> The Shettima comes from a long line of the Hadejia Emirate, preceded by late Alhaji Hassan Hadejia who was himself the Shettima of Hadejia, Former Minister of petroleum resources and Chairman of leadway assurance. Alhaji Hassan Hadejia has left a legendary trail of philanthropic works to those in need as long as he could afford it.
+His home in Fantai is very well known to the residents of Hadejia and Ibrahim Hadejia has come a long way in his attempt to fill the former elder Statesman’s Shoes, including area of residence.</p>
+
+<p>The Shettima was sworn in on (Date) while he was the deputy governor of Jigawa. He works closely with the royal family to provide aid to those in need. As the deputy governor of Jigawa, he has been heavily invested in job creation and bringing investment into Jigawa via the investjigawa program. Jobs, Economy, Agriculture and Education were all attacked as the deputy governor and his administration fought prevailing issues in the state. Truly he fights for the people, earning his title as the Shettima of Hadejia.</p>
+
+</div>
+</div>
+</div>
+
+<div id="plans" class="uk-section uk-padding-large">
+<div>
+<h1 class="uk-text-center"> What does the senator have planned?</h1>
+
+</div>
+<div class="uk-flex-middle" uk-grid>
+<div class="uk-panel">
+    <img class="uk-align-left uk-margin-remove-adjacent" src="" width="225" height="150" alt="Example image">
+coming soon
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<a class="uk-dark uk-xlarge-margin-left uk-text-large" href="#" uk-totop uk-scroll>GO BACK TO TOP</a>
+</div>
+</body>
+<footer class="uk-section-secondary">
+
+
+    <div class="uk-padding-small uk-margin-xlarge-left" uk-grid>
+    <ul class="uk-iconnav">
+      <a href="https://twitter.com/ihadejia" uk-icon="twitter"></a>
+      <a href="" uk-icon="facebook"></a>
+      <a href="https://www.instagram.com/ihadejia/" uk-icon="instagram"></a>
+    </ul>
+
+    <p class="uk-text-bottom">  © 2019 Senator Ibrahim Hadejia. Designed by Rukayya Hadejia </p>
+</div>
+
+
+
+</footer>
+{% endblock %}

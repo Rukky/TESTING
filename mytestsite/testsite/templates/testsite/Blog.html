@@ -1,0 +1,50 @@
+{% extends "testsite/base.html" %}
+{% block title %}
+    Senator Ibrahim Hadejia
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="uk-background-default">
+
+<div class="uk-position-top uk-text-large">
+    <nav class="uk-navbar-container uk-navbar-transparent uk-dark" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+              <a class="uk-navbar-item uk-logo" href="{% url 'home' %}" uk-scroll>IHH</a>
+                <li class="uk-active uk-dark"><a href="{% url 'home' %}">Back to Home</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="uk-section uk-height-viewport uk-background-cover uk-overflow-hidden" style="background-image: url(static/testsite/images/Op1.jpg);"  uk-parallax="bgy: -200">
+
+  <div class=" uk-card uk-width-1-2@s uuk-center uk-card-default uk-card-body uk-margin-xlarge-top uk-dark uk-text-large uk-text-center"  uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
+  </div>
+
+</div>
+<div>
+<h1 class="uk-text-center uk-dark uk-heading-primary"> Popular posts</h1>
+</div>
+<div class="uk-background-secondary uk-light uk-text-large">
+<marquee behavior="scroll" direction="left">{% for article in article %} {{article.title}}{% endfor %}</marquee>
+
+</div>
+<div uk-grid>
+{% for article in article %}
+  <div class="uk-card uk-card-default uk-card-small uk-card-body uk-width-2-3@m">
+          <h3 class="uk-card-title">{{ article.title }}</h3>
+          By: {{article.author}}
+          <p>{{article.summary}} </p>
+          <div class="uk-grid-small uk-child-width-auto" uk-grid>
+  <div>
+      <a class="uk-button uk-button-text" href="{%url 'article' article.id%}">Read more</a>
+  </div>
+  <div>
+      <a class="uk-button uk-button-text" href="{%url 'article' article.id%}#Comments">Comments</a>
+  </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+<a class="uk-dark uk-xlarge-margin-left uk-text-large" href="#" uk-totop uk-scroll>GO BACK TO TOP</a>
+{% endblock %}
